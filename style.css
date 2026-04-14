@@ -1,7 +1,7 @@
 :root{
     --green:#25D366;
     --blue:#0b2d4d;
-    --black:#000;
+    --black:#0a0a0a;
     --white:#fff;
 }
 
@@ -53,7 +53,7 @@ body{
     margin-top:10px;
 }
 
-/* MENU BUTTON */
+/* MENU */
 .menu-btn{
     position:fixed;
     top:20px;
@@ -67,7 +67,6 @@ body{
     z-index:10000;
 }
 
-/* OVERLAY */
 #overlay{
     position:fixed;
     width:100%;
@@ -77,7 +76,7 @@ body{
     z-index:9998;
 }
 
-/* SIDE MENU FIXED */
+/* SIDE MENU */
 .side-menu{
     position:fixed;
     top:0;
@@ -88,7 +87,7 @@ body{
     padding-top:70px;
     display:flex;
     flex-direction:column;
-    transition:0.4s;
+    transition:0.4s ease;
     overflow-y:auto;
 }
 
@@ -125,11 +124,18 @@ body{
     -webkit-text-fill-color:transparent;
 }
 
+/* SECTIONS */
 .section{
     padding:60px 20px;
     text-align:center;
 }
 
+.section h2{
+    color:var(--green);
+    margin-bottom:15px;
+}
+
+/* PRODUCTS */
 .products{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
@@ -143,7 +149,7 @@ body{
     border:1px solid #222;
 }
 
-/* CONTACT FIX */
+/* CONTACT */
 .contact{
     background:var(--blue);
     padding:60px 20px;
@@ -152,7 +158,6 @@ body{
 
 .contact p{
     margin:6px 0;
-    font-size:16px;
 }
 
 .whatsapp-btn,
@@ -177,7 +182,9 @@ body{
 
 /* FOOTER */
 .footer{
-    background:#000;
+    background:linear-gradient(90deg,var(--blue),var(--green));
     text-align:center;
     padding:20px;
+    color:white;
+    font-weight:bold;
 }

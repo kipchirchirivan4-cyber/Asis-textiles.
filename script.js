@@ -1,3 +1,4 @@
+
 // LOADER
 let percent = 0;
 let text = document.getElementById("percent");
@@ -8,12 +9,12 @@ let loader = setInterval(() => {
 
     if(percent >= 100){
         clearInterval(loader);
-        document.getElementById("loader").style.display = "none";
+        document.getElementById("loader").style.display="none";
     }
-}, 30);
+},30);
 
 
-// MENU FIX (WORKING VERSION)
+// MENU FIX (WORKING)
 let menu = document.getElementById("sideMenu");
 let overlay = document.getElementById("overlay");
 
@@ -40,5 +41,5 @@ function closeMenu(){
 }
 
 
-// YEAR
+// YEAR AUTO UPDATE
 document.getElementById("year").textContent = new Date().getFullYear();

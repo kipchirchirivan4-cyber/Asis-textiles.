@@ -8,27 +8,37 @@ let loader = setInterval(() => {
 
     if(percent >= 100){
         clearInterval(loader);
-        document.getElementById("loader").style.display="none";
+        document.getElementById("loader").style.display = "none";
     }
-},30);
+}, 30);
 
-// MENU
+
+// MENU FIX (WORKING VERSION)
 let menu = document.getElementById("sideMenu");
 let overlay = document.getElementById("overlay");
 
+let isOpen = false;
+
 function toggleMenu(){
-    menu.style.right === "0px" ? closeMenu() : openMenu();
+    if(isOpen){
+        closeMenu();
+    } else {
+        openMenu();
+    }
 }
 
 function openMenu(){
-    menu.style.right="0px";
-    overlay.style.display="block";
+    menu.style.right = "0px";
+    overlay.style.display = "block";
+    isOpen = true;
 }
 
 function closeMenu(){
-    menu.style.right="-250px";
-    overlay.style.display="none";
+    menu.style.right = "-260px";
+    overlay.style.display = "none";
+    isOpen = false;
 }
+
 
 // YEAR
 document.getElementById("year").textContent = new Date().getFullYear();

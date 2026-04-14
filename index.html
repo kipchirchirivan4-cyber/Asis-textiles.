@@ -3,23 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ASIS TEXTILES</title>
+
+<title>ASIS Textiles – Eldoret</title>
+
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
+<!-- LOADER -->
+<div id="loader">
+    <div class="welcome">Welcome to ASIS Textiles</div>
+    <div class="circle"></div>
+    <div class="percent" id="percent">0%</div>
+</div>
+
+<!-- MENU -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+<div id="overlay" onclick="closeMenu()"></div>
+
+<div id="sideMenu" class="side-menu">
+    <a href="#home" onclick="closeMenu()">Home</a>
+    <a href="#about" onclick="closeMenu()">About</a>
+    <a href="#products" onclick="closeMenu()">Products</a>
+    a href="#contact" onclick="closeMenu()">Contact</a>
+    <a href="#terms" onclick="closeMenu()">Terms</a>
+    <a href="#privacy" onclick="closeMenu()">Privacy</a>
+</div>
+
 <!-- HERO -->
-<div class="hero">
-    <div class="content">
+<div class="hero" id="home">
+    <div>
         <div class="logo-text">ASIS TEXTILES</div>
-        <div class="motto">“Where Comfort Meets Quality.”</div>
+        <div class="motto">Where Comfort Meets Quality</div>
     </div>
 </div>
 
+<!-- ABOUT -->
+<div class="section fade-in" id="about">
+    <h2>About Us</h2>
+    <p>ASIS Textiles is a trusted supplier in Eldoret.</p>
+</div>
+
 <!-- PRODUCTS -->
-<div class="section">
-    <h2>Our Premium Products</h2>
+<div class="section fade-in" id="products">
+    <h2>Our Products</h2>
 
     <div class="products">
         <div class="product">Cup Holders</div>
@@ -28,10 +56,9 @@
         <div class="product">Rexin</div>
         <div class="product">Speaker Covers</div>
         <div class="product">Pillows</div>
-        <div class="product">Tacks & Tack Guns</div>
+        <div class="product">Tacks & Guns</div>
         <div class="product">Stickers</div>
-        <div class="product">Gum (Adhesive)</div>
-        <div class="product">Spring Cushions</div>
+        <div class="product">Gum</div>
         <div class="product">Cushions</div>
         <div class="product">Mattresses</div>
         <div class="product">Foam Sheets</div>
@@ -41,38 +68,48 @@
 </div>
 
 <!-- CONTACT -->
-<div class="contact">
+<div class="contact fade-in" id="contact">
     <h2>Contact Us</h2>
-    <p>📞0724049413</p>
-    <p>📍Sosiani Street, Eldoret</p>
 
-    <a class="whatsapp-btn"
-       href="https://wa.me/254724049413"
-       target="_blank">
-       💬 Chat on WhatsApp
+    <p>📞 0724049413</p>
+    <p>📍 Sosiani Street, Eldoret</p>
+
+    <a class="whatsapp-btn" href="https://wa.me/254724049413" target="_blank">
+        💬 Chat on WhatsApp
     </a>
 
     <a class="directions-btn"
        href="https://www.google.com/maps/dir/?api=1&destination=G79C%2B28X%2C%20Sosian%20St%2C%20Eldoret"
        target="_blank">
-       🧭 Get Directions
+        🧭 Get direction
     </a>
 
     <div class="map">
         <iframe
         src="https://www.google.com/maps?q=G79C%2B28X%2C%20Sosian%20St%2C%20Eldoret&z=18&output=embed"
-        width="100%"
-        height="300"
-        style="border:0;"
-        loading="lazy">
-        </iframe>
+        width="100%" height="300"></iframe>
     </div>
+</div>
+
+<!-- TERMS -->
+<div class="section fade-in" id="terms">
+    <h2>Terms of Use</h2>
+    <p>Business information may change without notice.</p>
+</div>
+
+<!-- PRIVACY -->
+<div class="section fade-in" id="privacy">
+    <h2>Privacy Policy</h2>
+    <p>We only use your data for communication purposes.</p>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-    <p>© ASIS TEXTILES</p>
+    <p>© <span id="year"></span> ASIS TEXTILES</p>
 </div>
+
+<script src="script.js"></script>
 
 </body>
 </html>
+     

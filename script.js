@@ -37,8 +37,7 @@ document.querySelectorAll(".side-menu a").forEach(a=>{
 });
 
 
-// DATE FIX (DAY + MONTH + YEAR)
+// DATE FIX
 const d = new Date();
-
 document.getElementById("year").textContent =
 `${d.getDate()} ${d.toLocaleString('en-US',{month:'long'})} ${d.getFullYear()}`;

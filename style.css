@@ -13,6 +13,7 @@
 body{
     background:#0a0a0a;
     color:white;
+    min-height:100vh;   /* IMPORTANT FIX */
 }
 
 /* LOADER */
@@ -22,10 +23,10 @@ body{
     height:100%;
     background:#fff;
     display:flex;
+    flex-direction:column;
     justify-content:center;
     align-items:center;
-    flex-direction:column;
-    z-index:9999;
+    z-index:99999;
     color:black;
 }
 
@@ -76,9 +77,9 @@ body{
     text-decoration:none;
 }
 
-/* HERO */
+/* HERO (NO CUTTING ANYMORE) */
 .hero{
-    height:120vh;
+    min-height:100vh;   /* FIXED */
     display:flex;
     justify-content:center;
     align-items:center;
@@ -93,17 +94,25 @@ body{
     font-weight:900;
 }
 
-/* SECTIONS */
-.section{
-    padding:120px 20px;
+/* SCROLL */
+#scrollHint{
+    position:absolute;
+    bottom:30px;
     text-align:center;
 }
 
-/* PRODUCTS */
+/* SECTIONS (AUTO GROW DOWNWARD) */
+.section{
+    padding:100px 20px;
+    text-align:center;
+}
+
+/* PRODUCTS (FULL GRID, NO CUT OFF) */
 .products{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-    gap:10px;
+    grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+    gap:15px;
+    margin-top:20px;
 }
 
 .product{
@@ -122,14 +131,14 @@ body{
 .contact a{
     display:inline-block;
     margin:10px;
+    padding:10px 15px;
+    background:var(--green);
     color:white;
     text-decoration:none;
-    padding:10px 15px;
-    background:#25D366;
     border-radius:8px;
 }
 
-/* POLICY CARDS */
+/* POLICY (UNCHANGED LOOK) */
 .policy-card{
     background:rgba(255,255,255,0.05);
     max-width:800px;
@@ -142,24 +151,15 @@ body{
 
 .policy-card .icon{
     font-size:45px;
-    margin-bottom:10px;
-    animation:floatIcon 2s infinite;
-}
-
-@keyframes floatIcon{
-    0%{transform:translateY(0);}
-    50%{transform:translateY(-8px);}
-    100%{transform:translateY(0);}
 }
 
 .policy-card h2{
     color:#00c3ff;
-    margin-bottom:15px;
 }
 
 .policy-card p{
-    line-height:1.6;
     color:#ddd;
+    line-height:1.6;
 }
 
 /* FOOTER */

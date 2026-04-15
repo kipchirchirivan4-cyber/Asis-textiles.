@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ASIS Textiles – Eldoret</title>
-
 <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,7 +13,6 @@
 <!-- LOADER -->
 <div id="loader">
     <div class="welcome">Welcome to ASIS Textiles</div>
-    <div class="circle"></div>
     <div class="percent" id="percent">0%</div>
 </div>
 
@@ -25,32 +23,18 @@
 
 <!-- SIDE MENU -->
 <div id="sideMenu" class="side-menu">
-    <a href="#home" onclick="closeMenu()">🏠 Home</a>
-    <a href="#about" onclick="closeMenu()">ℹ️ About Us</a>
-    <a href="#products" onclick="closeMenu()">🧵 Products</a>
-    <a href="#contact" onclick="closeMenu()">📞 Contact</a>
-    <a href="#terms" onclick="closeMenu()">📜 Terms</a>
-    <a href="#privacy" onclick="closeMenu()">🔒 Privacy</a>
+    <a href="#home">🏠 Home</a>
+    <a href="#about">ℹ️ About Us</a>
+    <a href="#products">🧵 Products</a>
+    <a href="#contact">📞 Contact</a>
+    <a href="#terms">📜 Terms</a>
+    <a href="#privacy">🔒 Privacy</a>
 </div>
 
-<!-- SOUND -->
-<audio id="menuSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3" preload="auto"></audio>
-
-<!-- SCROLL HINT -->
-<div id="scrollHint">
-    <div class="arrow">⬇</div>
-    <div class="text">Scroll Down</div>
-</div>
+<audio id="menuSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
 
 <!-- HERO -->
 <div class="hero" id="home">
-
-    <!-- PARTICLES -->
-    <div class="spark-container">
-        <span></span><span></span><span></span><span></span>
-        <span></span><span></span><span></span><span></span>
-    </div>
-
     <div class="logo-text">ASIS TEXTILES</div>
     <div class="motto"><i>Where Comfort Meets Quality</i></div>
 </div>
@@ -64,7 +48,6 @@
 <!-- PRODUCTS -->
 <div class="section" id="products">
     <h2>Our Products</h2>
-
     <div class="products">
         <div class="product">Cup Holders</div>
         <div class="product">Suede Leather</div>
@@ -83,32 +66,30 @@
     <p>📞 0724049413</p>
     <p>📍 Sosiani Street, Eldoret</p>
 
-    <a class="whatsapp-btn" href="https://wa.me/254724049413" target="_blank">💬 WhatsApp</a>
+    <a href="https://wa.me/254724049413" target="_blank">💬 WhatsApp</a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=G79C%2B28X%2C%20Sosian%20St%2C%20Eldoret" target="_blank">🧭 Get Direction</a>
 
-    <a class="directions-btn"
-       href="https://www.google.com/maps/dir/?api=1&destination=G79C%2B28X%2C%20Sosian%20St%2C%20Eldoret"
-       target="_blank">🧭 Get Direction</a>
-
-    <div class="map">
-        <iframe
+    <iframe
         src="https://www.google.com/maps?q=G79C%2B28X%2C%20Sosian%2C%20Eldoret&z=18&output=embed"
-        width="100%" height="300" style="border:0;"></iframe>
-    </div>
+        width="100%" height="300" style="border:0;">
+    </iframe>
 </div>
 
 <!-- TERMS -->
-<div class="section" id="terms">
+<div class="section policy-card" id="terms">
+    <div class="icon">📜</div>
     <h2>Terms of Use</h2>
-    <p>ASIS Textiles provides information for business purposes only.</p>
-    <p>We are not responsible for any misuse or incorrect interpretation of content.</p>
+    <p>ASIS Textiles provides information for business use only. Users must not misuse content. We are not responsible for losses caused by misunderstanding or incorrect use of information provided.</p>
 </div>
 
 <!-- PRIVACY -->
-<div class="section" id="privacy">
+<div class="section policy-card" id="privacy">
+    <div class="icon">🔒</div>
     <h2>Privacy Policy</h2>
-    <p>We collect only basic contact details for communication.</p>
-    <p>We do not share personal data with third parties.</p>
+    <p>We collect only basic contact details to communicate with customers. Personal data is kept secure and is not shared, sold, or used for any unauthorized third-party purposes.</p>
 </div>
+
+<div class="space"></div>
 
 <!-- FOOTER -->
 <div class="footer">
@@ -116,6 +97,5 @@
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>

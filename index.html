@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -21,19 +21,22 @@
 <!-- MENU BUTTON -->
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-<div id="overlay" onclick="closeMenu()"></div>
+<div id="overlay"></div>
 
 <!-- SIDE MENU -->
 <div id="sideMenu" class="side-menu">
-
     <a href="#home" onclick="closeMenu()">🏠 Home</a>
     <a href="#about" onclick="closeMenu()">ℹ️ About Us</a>
     <a href="#products" onclick="closeMenu()">🧵 Products</a>
     <a href="#contact" onclick="closeMenu()">📞 Contact</a>
-
     <a href="#terms" onclick="closeMenu()">📜 Terms of Use</a>
     <a href="#privacy" onclick="closeMenu()">🔒 Privacy Policy</a>
+</div>
 
+<!-- SCROLL HINT -->
+<div id="scrollHint">
+    <div class="arrow">⬇</div>
+    <div class="text">Scroll Down</div>
 </div>
 
 <!-- HERO -->
@@ -45,13 +48,13 @@
 </div>
 
 <!-- ABOUT -->
-<div class="section fade-in" id="about">
+<div class="section" id="about">
     <h2>About Us</h2>
     <p>ASIS Textiles is a trusted supplier of premium fabrics and upholstery materials in Eldoret.</p>
 </div>
 
 <!-- PRODUCTS -->
-<div class="section fade-in" id="products">
+<div class="section" id="products">
     <h2>Our Products</h2>
 
     <div class="products">
@@ -74,50 +77,37 @@
 </div>
 
 <!-- CONTACT -->
-<div class="contact fade-in" id="contact">
+<div class="contact" id="contact">
     <h2>Contact Us</h2>
 
     <p>📞 0724049413</p>
     <p>📍 Sosiani Street, Eldoret</p>
 
-    <a class="whatsapp-btn"
-       href="https://wa.me/254724049413"
-       target="_blank">
-       💬 Chat on WhatsApp
-    </a>
+    <a class="whatsapp-btn" href="https://wa.me/254724049413" target="_blank">💬 WhatsApp</a>
 
     <a class="directions-btn"
        href="https://www.google.com/maps/dir/?api=1&destination=G79C%2B28X%2C%20Sosian%20St%2C%20Eldoret"
-       target="_blank">
-       🧭 Get direction
-    </a>
-
-    <div class="map">
-        <iframe
-        src="https://www.google.com/maps?q=G79C%2B28X%2C%20Sosian%2C%20Eldoret&z=18&output=embed"
-        width="100%" height="300" style="border:0;"></iframe>
-    </div>
+       target="_blank">🧭 Get Direction</a>
 </div>
 
 <!-- TERMS -->
-<div class="section fade-in" id="terms">
+<div class="section" id="terms">
     <h2>Terms of Use</h2>
-    <p>All information is for business use only. Prices may change without notice.</p>
+    <p>All information is for business use only.</p>
 </div>
 
 <!-- PRIVACY -->
-<div class="section fade-in" id="privacy">
+<div class="section" id="privacy">
     <h2>Privacy Policy</h2>
-    <p>Your data is only used for communication and is not shared with third parties.</p>
+    <p>Your data is only used for communication.</p>
 </div>
 
 <!-- FOOTER -->
 <div class="footer">
-    <p>© <span id="year"></span> ASIS TEXTILES</p>
+    © <span id="year"></span> ASIS TEXTILES
 </div>
 
 <script src="script.js"></script>
 
 </body>
 </html>
-     

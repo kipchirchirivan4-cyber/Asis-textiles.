@@ -1,39 +1,40 @@
 // LOADER
-let percent = 0;
-let text = document.getElementById("percent");
+let progress = 0;
 
-let loader = setInterval(() => {
-    percent += 2;
-    text.innerText = percent + "%";
+let bar = document.getElementById("loaderProgress");
+let text = document.getElementById("loaderText");
 
-    if(percent >= 100){
-        clearInterval(loader);
+let load = setInterval(()=>{
+    progress += 2;
+    bar.style.width = progress + "%";
+    text.innerText = progress + "%";
+
+    if(progress >= 100){
+        clearInterval(load);
         document.getElementById("loader").style.display = "none";
     }
-}, 30);
+},30);
 
 
-// MENU FIX
+// MENU (TOGGLE OPEN/CLOSE SAME BUTTON)
 const menu = document.getElementById("sideMenu");
 const overlay = document.getElementById("overlay");
-const sound = document.getElementById("menuSound");
 
 function toggleMenu(){
-    menu.classList.toggle("active");
-    overlay.style.display = menu.classList.contains("active") ? "block" : "none";
-    sound.currentTime = 0;
-    sound.play();
+    const isOpen = menu.classList.contains("active");
+
+    if(isOpen){
+        menu.classList.remove("active");
+        overlay.style.display = "none";
+    } else {
+        menu.classList.add("active");
+        overlay.style.display = "block";
+    }
 }
 
-function closeMenu(){
+overlay.addEventListener("click", ()=>{
     menu.classList.remove("active");
     overlay.style.display = "none";
-}
-
-overlay.addEventListener("click", closeMenu);
-
-document.querySelectorAll(".side-menu a").forEach(a=>{
-    a.addEventListener("click", closeMenu);
 });
 
 

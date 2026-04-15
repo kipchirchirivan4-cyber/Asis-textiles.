@@ -29,8 +29,8 @@ body{
 }
 
 .welcome{
-    font-size:22px;
     color:var(--blue);
+    font-size:22px;
     font-weight:bold;
 }
 
@@ -178,30 +178,25 @@ body{
 /* SCROLL HINT */
 #scrollHint{
     position:fixed;
-    bottom:30px;
+    bottom:40px;
     left:50%;
     transform:translateX(-50%);
     text-align:center;
     color:white;
     z-index:9997;
-    animation:fade 1.2s infinite;
 }
 
 #scrollHint .arrow{
-    font-size:30px;
-    animation:bounce 1s infinite;
+    font-size:45px;
+    animation: bounce 1s infinite;
 }
 
 #scrollHint .text{
-    font-size:14px;
+    font-size:16px;
+    font-weight:bold;
 }
 
 @keyframes bounce{
     0%,100%{transform:translateY(0);}
     50%{transform:translateY(10px);}
-}
-
-@keyframes fade{
-    0%,100%{opacity:0.6;}
-    50%{opacity:1;}
 }

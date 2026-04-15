@@ -16,34 +16,38 @@ let loader = setInterval(() => {
 
 
 // =====================
-// MENU FIX (WORKING)
+// MENU (FIXED & RELIABLE)
 // =====================
 document.addEventListener("DOMContentLoaded", function () {
 
-    let menu = document.getElementById("sideMenu");
-    let overlay = document.getElementById("overlay");
+    const menu = document.getElementById("sideMenu");
+    const overlay = document.getElementById("overlay");
+    const btn = document.querySelector(".menu-btn");
 
     function openMenu() {
-        menu.style.right = "0px";
+        menu.classList.add("active");
         overlay.style.display = "block";
     }
 
     function closeMenu() {
-        menu.style.right = "-260px";
+        menu.classList.remove("active");
         overlay.style.display = "none";
     }
 
-    function toggleMenu() {
-        if (menu.style.right === "0px") {
+    btn.addEventListener("click", function () {
+        if (menu.classList.contains("active")) {
             closeMenu();
         } else {
             openMenu();
         }
-    }
+    });
 
-    // Make functions accessible from HTML onclick
-    window.toggleMenu = toggleMenu;
-    window.closeMenu = closeMenu;
+    overlay.addEventListener("click", closeMenu);
+
+    document.querySelectorAll(".side-menu a").forEach(link => {
+        link.addEventListener("click", closeMenu);
+    });
+
 });
 
 

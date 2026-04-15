@@ -1,5 +1,5 @@
 // =====================
-// LOADER
+// LOADER (unchanged)
 // =====================
 let percent = 0;
 let text = document.getElementById("percent");
@@ -16,43 +16,46 @@ let loader = setInterval(() => {
 
 
 // =====================
-// MENU (FIXED & RELIABLE)
+// MENU FIX (GLOBAL FUNCTIONS)
 // =====================
-document.addEventListener("DOMContentLoaded", function () {
+const menu = document.getElementById("sideMenu");
+const overlay = document.getElementById("overlay");
 
-    const menu = document.getElementById("sideMenu");
-    const overlay = document.getElementById("overlay");
-    const btn = document.querySelector(".menu-btn");
+function openMenu() {
+    menu.classList.add("active");
+    overlay.style.display = "block";
+}
 
-    function openMenu() {
-        menu.classList.add("active");
-        overlay.style.display = "block";
+function closeMenu() {
+    menu.classList.remove("active");
+    overlay.style.display = "none";
+}
+
+function toggleMenu() {
+    if (menu.classList.contains("active")) {
+        closeMenu();
+    } else {
+        openMenu();
     }
+}
 
-    function closeMenu() {
-        menu.classList.remove("active");
-        overlay.style.display = "none";
-    }
+// Make functions accessible to HTML onclick
+window.toggleMenu = toggleMenu;
+window.closeMenu = closeMenu;
 
-    btn.addEventListener("click", function () {
-        if (menu.classList.contains("active")) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-    });
 
-    overlay.addEventListener("click", closeMenu);
+// Close when clicking overlay
+overlay.addEventListener("click", closeMenu);
 
-    document.querySelectorAll(".side-menu a").forEach(link => {
-        link.addEventListener("click", closeMenu);
-    });
 
+// Close when clicking menu links
+document.querySelectorAll(".side-menu a").forEach(link => {
+    link.addEventListener("click", closeMenu);
 });
 
 
 // =====================
-// AUTO DATE (DAY MONTH YEAR)
+// AUTO DATE
 // =====================
 const dateElement = document.getElementById("year");
 

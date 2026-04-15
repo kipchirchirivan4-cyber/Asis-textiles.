@@ -1,5 +1,6 @@
-
+// =====================
 // LOADER
+// =====================
 let percent = 0;
 let text = document.getElementById("percent");
 
@@ -7,39 +8,53 @@ let loader = setInterval(() => {
     percent += 2;
     text.innerText = percent + "%";
 
-    if(percent >= 100){
+    if (percent >= 100) {
         clearInterval(loader);
-        document.getElementById("loader").style.display="none";
+        document.getElementById("loader").style.display = "none";
     }
-},30);
+}, 30);
 
 
+// =====================
 // MENU FIX (WORKING)
-let menu = document.getElementById("sideMenu");
-let overlay = document.getElementById("overlay");
+// =====================
+document.addEventListener("DOMContentLoaded", function () {
 
-let isOpen = false;
+    let menu = document.getElementById("sideMenu");
+    let overlay = document.getElementById("overlay");
 
-function toggleMenu(){
-    if(isOpen){
-        closeMenu();
-    } else {
-        openMenu();
+    function openMenu() {
+        menu.style.right = "0px";
+        overlay.style.display = "block";
     }
-}
 
-function openMenu(){
-    menu.style.right = "0px";
-    overlay.style.display = "block";
-    isOpen = true;
-}
+    function closeMenu() {
+        menu.style.right = "-260px";
+        overlay.style.display = "none";
+    }
 
-function closeMenu(){
-    menu.style.right = "-260px";
-    overlay.style.display = "none";
-    isOpen = false;
-}
+    function toggleMenu() {
+        if (menu.style.right === "0px") {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    }
+
+    // Make functions accessible from HTML onclick
+    window.toggleMenu = toggleMenu;
+    window.closeMenu = closeMenu;
+});
 
 
-// YEAR AUTO UPDATE
-document.getElementById("year").textContent = new Date().getFullYear();
+// =====================
+// AUTO DATE (DAY MONTH YEAR)
+// =====================
+const dateElement = document.getElementById("year");
+
+const d = new Date();
+const day = d.getDate();
+const month = d.toLocaleString('en-US', { month: 'long' });
+const year = d.getFullYear();
+
+dateElement.textContent = `${day} ${month} ${year}`;

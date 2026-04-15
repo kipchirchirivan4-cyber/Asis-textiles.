@@ -29,9 +29,12 @@
     <a href="#about" onclick="closeMenu()">ℹ️ About Us</a>
     <a href="#products" onclick="closeMenu()">🧵 Products</a>
     <a href="#contact" onclick="closeMenu()">📞 Contact</a>
-    <a href="#terms" onclick="closeMenu()">📜 Terms of Use</a>
-    <a href="#privacy" onclick="closeMenu()">🔒 Privacy Policy</a>
+    <a href="#terms" onclick="closeMenu()">📜 Terms</a>
+    <a href="#privacy" onclick="closeMenu()">🔒 Privacy</a>
 </div>
+
+<!-- SOUND -->
+<audio id="menuSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3" preload="auto"></audio>
 
 <!-- SCROLL HINT -->
 <div id="scrollHint">
@@ -41,16 +44,21 @@
 
 <!-- HERO -->
 <div class="hero" id="home">
-    <div>
-        <div class="logo-text">ASIS TEXTILES</div>
-        <div class="motto"><i>Where Comfort Meets Quality</i></div>
+
+    <!-- PARTICLES -->
+    <div class="spark-container">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
     </div>
+
+    <div class="logo-text">ASIS TEXTILES</div>
+    <div class="motto"><i>Where Comfort Meets Quality</i></div>
 </div>
 
 <!-- ABOUT -->
 <div class="section" id="about">
     <h2>About Us</h2>
-    <p>ASIS Textiles is a trusted supplier of premium fabrics and upholstery materials in Eldoret.</p>
+    <p>ASIS Textiles is a trusted supplier of premium fabrics in Eldoret.</p>
 </div>
 
 <!-- PRODUCTS -->
@@ -64,15 +72,7 @@
         <div class="product">Rexin</div>
         <div class="product">Speaker Covers</div>
         <div class="product">Pillows</div>
-        <div class="product">Tacks & Tack Guns</div>
-        <div class="product">Stickers</div>
-        <div class="product">Gum (Adhesive)</div>
-        <div class="product">Spring Cushions</div>
         <div class="product">Cushions</div>
-        <div class="product">Mattresses</div>
-        <div class="product">Foam Sheets</div>
-        <div class="product">Leathers</div>
-        <div class="product">Suedes</div>
     </div>
 </div>
 
@@ -88,36 +88,26 @@
     <a class="directions-btn"
        href="https://www.google.com/maps/dir/?api=1&destination=G79C%2B28X%2C%20Sosian%20St%2C%20Eldoret"
        target="_blank">🧭 Get Direction</a>
+
+    <div class="map">
+        <iframe
+        src="https://www.google.com/maps?q=G79C%2B28X%2C%20Sosian%2C%20Eldoret&z=18&output=embed"
+        width="100%" height="300" style="border:0;"></iframe>
+    </div>
 </div>
 
 <!-- TERMS -->
 <div class="section" id="terms">
     <h2>Terms of Use</h2>
-
-    <p>
-        Welcome to ASIS Textiles. By using this website, you agree that all information provided is for general business purposes only.
-        Product details, availability, and pricing may change at any time without notice.
-    </p>
-
-    <p>
-        All content belongs to ASIS Textiles and must not be copied without permission. We are not responsible for any issues arising
-        from the use of this website or reliance on its information.
-    </p>
+    <p>ASIS Textiles provides information for business purposes only.</p>
+    <p>We are not responsible for any misuse or incorrect interpretation of content.</p>
 </div>
 
 <!-- PRIVACY -->
 <div class="section" id="privacy">
     <h2>Privacy Policy</h2>
-
-    <p>
-        ASIS Textiles only collects basic contact details when provided voluntarily. This information is used strictly for communication
-        and customer support.
-    </p>
-
-    <p>
-        We do not share personal data with third parties. While we protect your information, we cannot guarantee complete security
-        over internet transmission.
-    </p>
+    <p>We collect only basic contact details for communication.</p>
+    <p>We do not share personal data with third parties.</p>
 </div>
 
 <!-- FOOTER -->

@@ -1,10 +1,11 @@
+// LOADER
 let percent = 0;
 let text = document.getElementById("percent");
 
-// LOADER
 let loader = setInterval(() => {
     percent += 2;
     text.innerText = percent + "%";
+
     if(percent >= 100){
         clearInterval(loader);
         document.getElementById("loader").style.display="none";
@@ -12,7 +13,7 @@ let loader = setInterval(() => {
 },30);
 
 
-// MENU + SOUND
+// MENU
 const menu = document.getElementById("sideMenu");
 const overlay = document.getElementById("overlay");
 const sound = document.getElementById("menuSound");
@@ -28,30 +29,12 @@ function toggleMenu(){
     playSound();
 }
 
-function closeMenu(){
+overlay.addEventListener("click", ()=>{
     menu.classList.remove("active");
-    overlay.style.display = "none";
-    playSound();
-}
-
-overlay.addEventListener("click", closeMenu);
-
-document.querySelectorAll(".side-menu a").forEach(a=>{
-    a.addEventListener("click", closeMenu);
+    overlay.style.display="none";
 });
 
 
-// DATE
-const d = new Date();
+// YEAR
 document.getElementById("year").textContent =
-`${d.getDate()} ${d.toLocaleString('en-US',{month:'long'})} ${d.getFullYear()}`;
-
-
-// SCROLL HINT
-const scrollHint = document.getElementById("scrollHint");
-
-window.addEventListener("scroll", function(){
-    if(window.scrollY > 100){
-        scrollHint.style.opacity = "0";
-    }
-});
+new Date().getFullYear();

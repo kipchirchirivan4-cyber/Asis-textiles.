@@ -40,11 +40,13 @@ document.getElementById("year").textContent =
 `${d.getDate()} ${d.toLocaleString('en-US',{month:'long'})} ${d.getFullYear()}`;
 
 
-/// SCROLL HINT
+// SCROLL HINT FIX
 const scrollHint = document.getElementById("scrollHint");
 
 window.addEventListener("scroll", function(){
-    if(window.scrollY > 80){
-        scrollHint.style.display = "none";
+    if(window.scrollY > 100){
+        scrollHint.style.opacity = "0";
+    } else {
+        scrollHint.style.opacity = "1";
     }
 });
